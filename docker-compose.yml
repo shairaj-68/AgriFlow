@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: agriflow-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: agriflow_user
+      POSTGRES_PASSWORD: agriflow_secure_password_2026
+      POSTGRES_DB: agriflow_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: agriflow-backend
+    restart: always
+    environment:
+      DATABASE_URL: postgresql://agriflow_user:agriflow_secure_password_2026@postgres:5432/agriflow_db
+      JWT_SECRET: agriflow_precision_agriculture_super_secret_key_2026_x7890
+      OPEN_METEO_BASE_URL: https://api.open-meteo.com/v1
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: agriflow-frontend
+    restart: always
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:

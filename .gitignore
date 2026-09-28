@@ -1,0 +1,115 @@
+# ===========================
+# Python / Backend
+# ===========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.env
+.env.*
+!.env.example
+*.db
+*.sqlite3
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# Python installed packages (backend dir acts as venv root)
+# Exclude all the pip-installed package dirs to keep repo clean
+backend/annotated_doc/
+backend/annotated_types/
+backend/anyio/
+backend/bcrypt/
+backend/certifi/
+backend/cffi/
+backend/click/
+backend/cryptography/
+backend/dateutil/
+backend/dotenv/
+backend/ecdsa/
+backend/fastapi/
+backend/greenlet/
+backend/h11/
+backend/httpcore/
+backend/httptools/
+backend/httpx/
+backend/idna/
+backend/iniconfig/
+backend/jose/
+backend/multipart/
+backend/numpy/
+backend/numpy.libs/
+backend/packaging/
+backend/pandas/
+backend/passlib/
+backend/pluggy/
+backend/pyasn1/
+backend/pycparser/
+backend/pydantic/
+backend/pydantic_core/
+backend/pydantic_settings/
+backend/pygments/
+backend/pytest/
+backend/pytest_asyncio/
+backend/rsa/
+backend/sqlalchemy/
+backend/starlette/
+backend/uvicorn/
+backend/uvloop/
+backend/watchfiles/
+backend/websockets/
+backend/yaml/
+backend/typing_inspection/
+backend/venv/
+backend/*.dist-info/
+backend/*.so
+backend/__pycache__/
+backend/.pytest_cache/
+backend/app/__pycache__/
+backend/app/**/__pycache__/
+backend/tests/__pycache__/
+
+# ===========================
+# Node.js / Frontend
+# ===========================
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.cache/
+frontend/.vite/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===========================
+# IDE / Editor
+# ===========================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ===========================
+# Docker
+# ===========================
+.dockerignore
+
+# ===========================
+# Misc
+# ===========================
+*.pem
+*.key
+*.crt
+coverage/
+.nyc_output/

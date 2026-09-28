@@ -1,0 +1,10 @@
+{
+  "venvPath": "/home/shai-raj-n/Documents/DS/agriflow-ai/backend",
+  "venv": "venv",
+  "extraPaths": [
+    "/home/shai-raj-n/Documents/DS/agriflow-ai/backend",
+    "/home/shai-raj-n/Documents/DS/agriflow-ai/backend/venv/lib/python3.12/site-packages",
+    "/home/shai-raj-n/.local/lib/python3.12/site-packages"
+  ],
+  "pythonVersion": "3.12"
+}

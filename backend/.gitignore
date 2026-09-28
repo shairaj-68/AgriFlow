@@ -1,0 +1,15 @@
+# Exclude EVERYTHING in backend/ by default
+*
+# But include subdirectories we DO want
+!app/
+!app/**
+!tests/
+!tests/**
+!schemas/
+# Include specific root-level files we want
+!.env.example
+!requirements.txt
+!pytest.ini
+!pyrightconfig.json
+!agriflow.db
+!.gitignore
